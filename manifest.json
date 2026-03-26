@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "PocketOption OTC Signal",
+  "version": "1.0",
+  "description": "RSI + Stochastic 1-minute OTC signals with 5-10 second alert before candle close",
+  "permissions": ["storage", "notifications", "alarms"],
+  "host_permissions": ["https://pocketoption.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://pocketoption.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PO OTC Signal",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
