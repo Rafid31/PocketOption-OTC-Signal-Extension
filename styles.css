@@ -1,0 +1,197 @@
+/* PocketOption OTC Signal Extension - Styles */
+
+/* Control Panel */
+#po-signal-panel {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 200px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 999999;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.po-panel-header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #00d9ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.po-panel-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.po-status-active {
+  color: #00ff88;
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+.po-status-inactive {
+  color: #666;
+  font-size: 18px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#po-status-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.po-panel-stats {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.po-panel-stats > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.po-panel-stats span {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+#po-toggle-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #e94560 0%, #c72c41 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+
+#po-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.4);
+}
+
+/* Signal Alert Overlay */
+#po-signal-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999999;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.po-signal-content {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 4px solid;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  min-width: 300px;
+}
+
+.po-signal-buy .po-signal-content {
+  border-color: #00ff88;
+  box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+}
+
+.po-signal-sell .po-signal-content {
+  border-color: #ff4757;
+  box-shadow: 0 20px 60px rgba(255, 71, 87, 0.3);
+}
+
+.po-signal-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.po-signal-type {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.po-signal-buy .po-signal-type {
+  color: #00ff88;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.po-signal-sell .po-signal-type {
+  color: #ff4757;
+  text-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+}
+
+.po-signal-expiry {
+  font-size: 20px;
+  color: #00d9ff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.po-signal-indicators {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.po-signal-indicators div {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.po-signal-timer {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ffa502;
+  font-weight: bold;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
